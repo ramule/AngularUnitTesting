@@ -1,0 +1,12 @@
+<div class="row mt-5">
+  <div class="col-12">
+    <p>Type something in the input field to search the list of specific items</p>
+    <input class="form-control" id="myInput" type="text"[(ngModel)]="searchItem" placeholder="Search here">
+    <button class="btn btn-primary float-right" id="searchButton" (click)="onSearch($event)">Search</button>
+  </div>
+</div>
+
+<ul class="list-group">
+  <li *ngFor="let item of prodList; let i = index" id="{{'product_'+i}}" class="list-group-item">{{item}}</li>
+</ul>
+

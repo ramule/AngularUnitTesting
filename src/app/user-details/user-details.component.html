@@ -1,0 +1,25 @@
+<div class="container">
+  <div>
+    <div class="row">
+      <div class="col-6">
+        <label>Id: </label>
+        <div id="userid">{{id}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <input type="text" class="form-control" [(ngModel)]="name" id="name" name="name" placeholder="Enter Name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 mt-2">
+        <input type="text" class="form-control" [(ngModel)]="age" id="age" name="age" placeholder="Enter Age">
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-12">
+        <button class="btn btn-primary btn-block" (click)="updateUser()" type="submit">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<h4>Test parameterized pipe</h4>
+<div>
+  <div class="row">
+    <div class="col-6">
+      <select [(ngModel)]="val">
+        <option value="">select</option>
+        <option *ngFor="let item of list" [value]="item">{{item}}</option>
+      </select>
+    </div>
+  </div>
+  <br>
+  <div *ngIf="val" class="row">
+    <div class="col-6">
+      {{'Sample Text' | enclosePipe: val}}
+    </div>
+  </div>
+</div>
+

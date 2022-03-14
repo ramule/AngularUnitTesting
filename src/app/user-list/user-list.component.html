@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h4>@Input @Output testing</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <h5>User List</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <ul class="list-group" style="cursor:pointer; list-style-type: none; border: 1px solid black;">
+        <li class="list-item" (click)="onUserClick(item)" *ngFor="let item of userList; let i = index" id="{{'user_'+i}}"> name: {{item.name}}, age: {{item.age}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-6">
+      <app-user-details [selUser]="selectedUser" (updatedUser)="userUpdate($event)"></app-user-details>
+    </div>
+  </div>
+</div>

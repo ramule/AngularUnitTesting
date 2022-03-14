@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-6">
+    <h3>Test Square pipe</h3>
+
+    <input type="text" class="form-control" [(ngModel)]="inputNumber" placeholder="Enter a number">
+    <br>
+    <strong *ngIf="inputNumber">Square is {{inputNumber | squarePipe}}</strong>
+  </div>
+</div>
+
